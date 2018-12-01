@@ -19,7 +19,7 @@ output = PdfFileWriter()
 page = existing_pdf.getPage(0)
 page.mergePage(new_pdf.getPage(0))
 output.addPage(page)
-# finally, write "output" to a real file
+# finally, write "output" to a new file
 outputStream = open("destination.pdf", "wb")
 output.write(outputStream)
 outputStream.close()
